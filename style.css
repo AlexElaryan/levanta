@@ -530,23 +530,32 @@ button {
 }
 
 @media screen and (max-width:1400px) {
+    body {
+        background-image: url(img/main-bg-mob.png);
+        /* background-size: 360px 600px; */
+        background-repeat: no-repeat;
+
+
+    }
     .home {
         padding: 24px 10px;
-        gap: 70px;
+        gap: 72px;
+        height: 460px;
+        background: none;
     }
 
     .home-content {
         gap: 12px;
-        margin: auto;
     }
 
     .home-content h1 {
         font-size: 32px;
-        line-height: 100%;
+        line-height: 116%;
     }
 
     .home-content p {
         font-size: 16px;
+        height: 44px;
     }
 
     .blue-btn {
@@ -582,6 +591,8 @@ button {
     .vision .title {
         font-size: 20px;
         width: 100%;
+        height: 82px;
+        overflow: hidden;
     }
 
     .vision {
@@ -593,7 +604,9 @@ button {
         gap: 12px;
         flex-direction: column;
     }
-
+.corusel-content {
+    gap: 10px;
+}
     .works-left {
         width: 100%;
         align-items: center;
@@ -698,5 +711,9 @@ button {
 
     .pdf-about_content .info-text {
         font-size: 16px;
+    }
+
+    .logo {
+        width: 126px;
     }
 }
