@@ -537,6 +537,7 @@ button {
 
     .home-content {
         gap: 12px;
+        margin: auto;
     }
 
     .home-content h1 {
@@ -634,7 +635,12 @@ button {
 
     .corusel-items,
     .corusel-items:nth-of-type(even) {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        display: flex;
+    }
+
+    .corusel-items:last-of-type > div:first-of-type {
+        display: none;
     }
 
     .corusel-item {
@@ -648,8 +654,9 @@ button {
     }
 
     .corusel-item_left::after {
-        width: 140px;
-        height: 140px;
+        width: 186px;
+        height: 186px;
+        background: radial-gradient(rgba(68, 197, 255, 0.2), transparent, transparent);
     }
 
     .system {
