@@ -154,7 +154,7 @@ button {
     top: 50%;
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background: radial-gradient(rgba(68, 197, 255, 0.2), transparent, transparent);
+    background: radial-gradient(rgba(68, 197, 255, 0.4), transparent, transparent);
     opacity: .9;
     z-index: 0;
 }
@@ -167,6 +167,10 @@ button {
     text-align: center;
     text-transform: uppercase;
     color: rgba(68, 197, 255, 1);
+}
+
+.skill-item span {
+    display: none;
 }
 
 .vision {
@@ -537,6 +541,7 @@ button {
 
 
     }
+
     .home {
         padding: 24px 10px;
         gap: 72px;
@@ -565,6 +570,7 @@ button {
 
     .title {
         font-size: 24px;
+        max-width: 243px;
     }
 
     .skill-top .info-text {
@@ -584,6 +590,7 @@ button {
     }
 
     .skill-item {
+        min-height: 210px;
         padding: 8px;
         overflow: hidden;
     }
@@ -604,9 +611,11 @@ button {
         gap: 12px;
         flex-direction: column;
     }
-.corusel-content {
-    gap: 10px;
-}
+
+    .corusel-content {
+        gap: 10px;
+    }
+
     .works-left {
         width: 100%;
         align-items: center;
@@ -634,8 +643,22 @@ button {
         padding: 0;
     }
 
+    .founder .title {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
     .corusel {
         padding: 80px 10px;
+    }
+
+    .corusel .title {
+        max-width: 100%;
+    }
+
+    .founder_content .info-text {
+        font-size: 16px;
+        margin-top: 12px;
     }
 
     .corusel-item::after {
@@ -652,7 +675,7 @@ button {
         display: flex;
     }
 
-    .corusel-items:last-of-type > div:first-of-type {
+    .corusel-items:last-of-type>div:first-of-type {
         display: none;
     }
 
@@ -685,13 +708,20 @@ button {
     .status-item h2 {
         font-size: 24px;
     }
+
     .status-item button {
         font-size: 16px;
     }
+
     .status-block {
         width: 100%;
         gap: 10px;
         overflow-x: scroll;
+    }
+
+    .system .info-text {
+        font-size: 16px;
+        margin-top: 12px;
     }
 
     .pdf-about {
@@ -715,5 +745,16 @@ button {
 
     .logo {
         width: 126px;
+    }
+
+    .skill-item span {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        flex-grow: 1;
     }
 }
