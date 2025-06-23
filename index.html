@@ -17,7 +17,16 @@
                 More Motivation.
                 You Need Strength.</h1>
             <p>The strength to rebuild yourself — one mindset, one habit, one day at a time.</p>
-            <button class="blue-btn">Play Intro Video</button>
+            <button class="blue-btn" onclick="openIntroVideo()">Play Intro Video</button>
+        </div>
+    </div>
+
+    <div id="videoModal" class="modal">
+        <div>
+            <video id="introVideo" width="640" controls>
+                <source src="img/levkazaryanlogo_levanta_HD_02 (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 
@@ -36,7 +45,7 @@
                 </div>
                 <p>Confidence</p>
                 <span>Stand tall in who you are — no
-                     approval needed.</span>
+                    approval needed.</span>
             </div>
             <div class="skill-item">
                 <div>
@@ -44,7 +53,7 @@
                 </div>
                 <p>Discipline</p>
                 <span>Do what matters, even when it’s
-                     hard.</span>
+                    hard.</span>
             </div>
             <div class="skill-item">
                 <div>
@@ -52,7 +61,7 @@
                 </div>
                 <p>Focus</p>
                 <span>Train your mind to follow through,
-                     not wander.</span>
+                    not wander.</span>
             </div>
             <div class="skill-item">
                 <div>
@@ -60,7 +69,7 @@
                 </div>
                 <p>Life Skills</p>
                 <span>Master the habits that shape a
-                     better you.</span>
+                    better you.</span>
             </div>
         </div>
     </section>
@@ -293,9 +302,49 @@
         <div class="pdf-about_content">
             <p class="title">Full PDF About Levanta</p>
             <p class="info-text">Download the full PDF document to fully familiarize yourself with Levanta</p>
-            <button class="blue-btn">Download PDF File</button>
+            <a href="Levanta_20250622_193655_0000.pdf" download class="blue-btn">
+                Download PDF File
+            </a>
         </div>
     </section>
+
+    <script>
+        // function openIntroVideo() {
+        //     document.getElementById('videoModal').style.display = 'flex';
+        //     document.getElementById('introVideo').play();
+        //     document.body.style.overflow = 'hidden';
+        // }
+
+
+
+        // function closeIntroVideo() {
+        //     const video = document.getElementById('introVideo');
+        //     video.pause();
+        //     video.currentTime = 0;
+        //     document.getElementById('videoModal').style.display = 'none';
+        //     document.body.style.overflow = 'auto';
+        // }
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('introVideo');
+
+        function openIntroVideo() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            video.play();
+        }
+
+        // Close modal when clicking outside the video
+        modal.addEventListener('click', (e) => {
+            if (!video.contains(e.target)) {
+                video.pause();
+                video.currentTime = 0;
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+
+            }
+        });
+    </script>
 
 </body>
 
